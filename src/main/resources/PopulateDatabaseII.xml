@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * PopulateDatabase.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+	
+	<!-- User accounts -->
+
+	<bean id="userAccountAdministrator1" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Other domain beans come here -->
+		
+	<!-- Administrator -->
+	
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="admin" />
+		<property name="surname" value="admin" />
+		<property name="email" value="admin@acme.com" />
+		<property name="phone" value="+34666666666" />
+		<property name="userAccount" ref="userAccountAdministrator1" />
+	</bean>	
+	
+	<!-- Configuration	(6 horas en ms)-->
+	
+	<bean id="configuration" class="domain.Configuration">
+		<property name="cacheTime" value="21600000"/>
+		<property name="partnerFee" value="0.25"/>
+	</bean>
+
+	
+	
+</beans>

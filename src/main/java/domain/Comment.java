@@ -74,7 +74,7 @@ public class Comment extends DomainEntity {
 		return this.actor;
 	}
 
-	public void setAnimaniac(final Actor actor) {
+	public void setActor(final Actor actor) {
 		this.actor = actor;
 	}
 

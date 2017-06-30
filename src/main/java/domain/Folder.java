@@ -22,15 +22,15 @@ public class Folder extends DomainEntity {
 	// Attributes -------------------------------------------------------------
 
 	private String	name;
-	private boolean	readonly;
+	private boolean	readOnly;
 
 
-	public boolean getReadonly() {
-		return this.readonly;
+	public boolean getReadOnly() {
+		return this.readOnly;
 	}
 
-	public void setReadonly(final boolean readonly) {
-		this.readonly = readonly;
+	public void setReadOnly(final boolean readOnly) {
+		this.readOnly = readOnly;
 	}
 
 	public String getName() {

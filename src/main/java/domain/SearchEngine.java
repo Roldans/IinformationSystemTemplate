@@ -15,6 +15,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import org.hibernate.validator.constraints.SafeHtml;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -23,22 +24,18 @@ public class SearchEngine extends DomainEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	private Date	startDate;
-	private Date	endDate;
-	private String	address;
-	private String	type;
+	private String	name;
 	private Date	searchMoment;
 
 
-	@NotNull
-	public String getType() {
-		return this.type;
+	@SafeHtml
+	public String getName() {
+		return this.name;
 	}
 
-	public void setType(final String type) {
-		this.type = type;
+	public void setName(final String name) {
+		this.name = name;
 	}
-
 	@Past
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -48,35 +45,6 @@ public class SearchEngine extends DomainEntity {
 
 	public void setSearchMoment(final Date searchMoment) {
 		this.searchMoment = searchMoment;
-	}
-
-	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	@Temporal(TemporalType.TIMESTAMP)
-	public Date getStartDate() {
-		return this.startDate;
-	}
-
-	public void setStartDate(final Date startDate) {
-		this.startDate = startDate;
-	}
-
-	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
-	@Temporal(TemporalType.TIMESTAMP)
-	public Date getEndDate() {
-		return this.endDate;
-	}
-
-	public void setEndDate(final Date endDate) {
-		this.endDate = endDate;
-	}
-
-	@NotNull
-	public String getAddress() {
-		return this.address;
-	}
-
-	public void setAddress(final String address) {
-		this.address = address;
 	}
 
 

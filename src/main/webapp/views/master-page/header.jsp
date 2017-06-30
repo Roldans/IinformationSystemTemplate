@@ -25,12 +25,10 @@
 		
 		<li>
 			<a class="fNiv"> 		
-			<spring:message code="master.page.events" />
+			
 			</a>
 			<ul>
 				<li class="arrow"></li>
-				<li><a href="event/list.do"><spring:message code="master.page.events.next.to.close" /></a></li>
-				<li><a href="event/list/all.do"><spring:message code="master.page.events.all" /></a></li>
 			</ul>
 		</li>
 		
@@ -42,8 +40,7 @@
 				</a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a href="chorbi/register.do"><spring:message code="master.page.register.chorbi" /></a></li>
-					<li><a href="managers/register.do"><spring:message code="master.page.register.manager" /></a></li>
+					<li><a href="user/register.do"><spring:message code="master.page.register" /></a></li>
 				</ul>
 			</li>
 		</security:authorize>

@@ -56,7 +56,7 @@ public class PopulateDatabase {
 			databaseUtil.recreateDatabase();
 
 			System.out.print("Reading web of entities from `PopulateDatabase.xml'");
-			populationContext = new ClassPathXmlApplicationContext("classpath:PopulateDatabase.xml");
+			populationContext = new ClassPathXmlApplicationContext("classpath:PopulateDatabaseII.xml");
 			entityMap = populationContext.getBeansWithAnnotation(Entity.class);
 			System.out.printf(" (%d entities found).%n", entityMap.size());
 

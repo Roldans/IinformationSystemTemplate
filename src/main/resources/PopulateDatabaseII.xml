@@ -48,7 +48,6 @@
 	
 	<bean id="configuration" class="domain.Configuration">
 		<property name="cacheTime" value="21600000"/>
-		<property name="partnerFee" value="0.25"/>
 	</bean>
 
 	

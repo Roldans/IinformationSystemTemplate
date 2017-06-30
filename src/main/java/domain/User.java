@@ -21,7 +21,6 @@ public class User extends Actor {
 	private String	address;
 	private String	picture;
 	private boolean	banned;
-	private int		rate;
 
 
 	@Pattern(regexp = "^male$|^female$")
@@ -59,14 +58,6 @@ public class User extends Actor {
 
 	public void setBanned(final boolean banned) {
 		this.banned = banned;
-	}
-
-	public int getRate() {
-		return this.rate;
-	}
-
-	public void setRate(final int rate) {
-		this.rate = rate;
 	}
 
 	// Relationships ----------------------------------------------------------

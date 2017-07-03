@@ -29,6 +29,8 @@
 	<security:http auto-config="true" use-expressions="true">
 	
 		<!-- permitAll -->
+		<!-- 		<security:intercept-url pattern="" access="permitAll" /> -->
+		
 		<security:intercept-url pattern="/" access="permitAll" /> 
 
 		<security:intercept-url pattern="/favicon.ico" access="permitAll" /> 
@@ -50,21 +52,33 @@
 		<security:intercept-url pattern="/welcome/index.do" access="permitAll" />
 		
 		
+		<security:intercept-url pattern="/actor/list.do" access="permitAll" />
+		
+		
 		<!-- Actor -->			
 <!-- 		<security:intercept-url pattern="" access="isAuthenticated()" /> -->
-
+		<!-- folders -->
+		<security:intercept-url pattern="/folder/list.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/folder/view.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/folder/edit.do" access="isAuthenticated()" />
+		<!-- messages -->
+		<security:intercept-url pattern="/message/view.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/delete.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/reply.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/move.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/forward.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/message/write.do" access="isAuthenticated()" />
+		
+		
+		
+		
+		
+		
 		<!-- Administrator -->		
 <!-- 		<security:intercept-url pattern="" access="hasRole('ADMINISTRATOR')" /> -->
 		
-		<!-- Animaniac -->
-<!-- 		<security:intercept-url pattern="" access="hasRole('ANIMANIAC')" /> -->
-		
-		<!-- Partner -->
-<!-- 		<security:intercept-url pattern="" access="hasRole('PARTNER')" /> -->
-		
-		<!-- Vet -->
-<!-- 		<security:intercept-url pattern="" access="hasRole('VET')" /> -->
-		
+		<!-- User -->
+<!-- 		<security:intercept-url pattern="" access="hasRole('USER')" /> -->
 		<!--NONE -->
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
 		

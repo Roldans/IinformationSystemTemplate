@@ -24,12 +24,8 @@
 		<!-- Do not forget the "fNiv" class for the first level links !! -->
 		
 		<li>
-			<a class="fNiv"> 		
-			
-			</a>
-			<ul>
-				<li class="arrow"></li>
-			</ul>
+		
+			<li><a class="fNiv" href="actor/list.do"><spring:message code="master.page.actorList" /></a></li>
 		</li>
 		
 		<security:authorize access="isAnonymous()">

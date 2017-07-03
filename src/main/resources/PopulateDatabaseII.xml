@@ -49,7 +49,27 @@
 	<bean id="configuration" class="domain.Configuration">
 		<property name="cacheTime" value="21600000"/>
 	</bean>
-
+	<bean id="folder1Administrator1" class="domain.Folder">
+		<property name="name" value="inbox" />
+		<property name="readOnly" value="true" />
+		<property name="actor" ref="administrator1" />
+	</bean>
+	<bean id="folder2Administrator1" class="domain.Folder">
+		<property name="name" value="outbox" />
+		<property name="readOnly" value="true" />
+		<property name="actor" ref="administrator1" />
+	</bean>
+	<bean id="folder3Administrator1" class="domain.Folder">
+		<property name="name" value="trashbox" />
+		<property name="readOnly" value="true" />	
+		<property name="actor" ref="administrator1" />
+	</bean>
+	<bean id="folder4Administrator1" class="domain.Folder">
+		<property name="name" value="spambox" />
+		<property name="readOnly" value="true" />
+		<property name="actor" ref="administrator1" />
+	</bean>
+	
 	
 	
 </beans>

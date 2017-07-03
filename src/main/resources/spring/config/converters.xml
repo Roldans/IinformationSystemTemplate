@@ -22,8 +22,18 @@
 			Add your own converters using entries of the following form: 
 			<bean class="converters.Class1ToClass2" /> 
 		-->
+		<!-- Actor -->
  		<bean class="converters.ActorToStringConverter" />
 		<bean class="converters.StringToActorConverter" />
+		
+		
+		<!-- Attachment-->
+		<bean class="converters.AttachmentToStringConverter" />
+		<bean class="converters.StringToAttachmentConverter" />
+		
+		<!--Folder-->
+		<bean class="converters.FolderToStringConverter" />
+		<bean class="converters.StringToFolderConverter" />
 		
 	</util:list>
 	

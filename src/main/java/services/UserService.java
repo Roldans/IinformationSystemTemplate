@@ -66,7 +66,7 @@ public class UserService {
 		this.actorService.setActorProperties(result);
 
 		authority = new Authority();
-		authority.setAuthority("ANIMANIAC");
+		authority.setAuthority("USER");
 
 		result.getUserAccount().addAuthority(authority);
 

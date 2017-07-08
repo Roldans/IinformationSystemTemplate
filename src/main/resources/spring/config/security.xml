@@ -51,6 +51,8 @@
 		 
 		<security:intercept-url pattern="/welcome/index.do" access="permitAll" />
 		
+		<security:intercept-url pattern="/user/register.do" access="permitAll" />
+		
 		
 		<security:intercept-url pattern="/actor/list.do" access="permitAll" />
 		

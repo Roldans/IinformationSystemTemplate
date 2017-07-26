@@ -12,6 +12,6 @@ package utilities;
 
 public interface DatabaseConfig {
 
-	public final String	PersistenceUnit	= "Acme-Pet";
+	public final String	PersistenceUnit	= "InformationSystemTemplate";
 
 }

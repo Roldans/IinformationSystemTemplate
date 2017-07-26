@@ -243,10 +243,15 @@ public class DatabaseUtil {
 				Statement statement;
 
 				statement = connection.createStatement();
-				for (final String line : script)
-					statement.execute(line);
-				connection.commit();
+				try {
+					for (final String line : script)
+						statement.execute(line);
+					connection.commit();
+				} finally {
+					statement.close();
+				}
 			}
+
 		});
 	}
 

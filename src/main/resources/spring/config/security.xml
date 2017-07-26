@@ -57,8 +57,11 @@
 		<security:intercept-url pattern="/actor/list.do" access="permitAll" />
 		
 		
-		<!-- Actor -->			
+			
 <!-- 		<security:intercept-url pattern="" access="isAuthenticated()" /> -->
+		<!-- Actor -->		
+		<security:intercept-url pattern="/actor/myProfile.do" access="isAuthenticated()" />
+		
 		<!-- folders -->
 		<security:intercept-url pattern="/folder/list.do" access="isAuthenticated()" />
 		<security:intercept-url pattern="/folder/view.do" access="isAuthenticated()" />
@@ -70,17 +73,21 @@
 		<security:intercept-url pattern="/message/move.do" access="isAuthenticated()" />
 		<security:intercept-url pattern="/message/forward.do" access="isAuthenticated()" />
 		<security:intercept-url pattern="/message/write.do" access="isAuthenticated()" />
-		
-		
+		<!-- views -->
+		<security:intercept-url pattern="/user/view.do" access="isAuthenticated()" />
+		<security:intercept-url pattern="/administrator/view.do" access="isAuthenticated()" />
 		
 		
 		
 		
 		<!-- Administrator -->		
 <!-- 		<security:intercept-url pattern="" access="hasRole('ADMINISTRATOR')" /> -->
+		<security:intercept-url pattern="/administrator/administrator/edit.do" access="hasRole('ADMINISTRATOR')" />
 		
 		<!-- User -->
 <!-- 		<security:intercept-url pattern="" access="hasRole('USER')" /> -->
+		<security:intercept-url pattern="/user/user/edit.do" access="hasRole('USER')" />
+
 		<!--NONE -->
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
 		

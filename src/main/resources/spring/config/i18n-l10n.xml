@@ -24,7 +24,8 @@
 		<value>/views/message/messages</value>
 		<value>/views/actor/messages</value>
 		<value>/views/user/messages</value>
-
+		<value>/views/administrator/messages</value>
+		
 	</util:list>
 
 </beans>

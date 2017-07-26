@@ -48,10 +48,11 @@
 			        (<security:authentication property="principal.username" />)
 				</a>
 				<ul>
+				
 					<li class="arrow"></li>
+					<li><a href="actor/myProfile.do"><spring:message code="master.page.profile" /></a></li>
 					
 					<security:authorize access="hasRole('USER')">
-						
 					</security:authorize>
 					<security:authorize access="hasRole('ADMINISTRATOR')">
 						

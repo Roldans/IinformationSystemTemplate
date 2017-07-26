@@ -73,6 +73,7 @@ public class EclipseStream extends OutputStream {
 			try {
 				Thread.sleep(250);
 			} catch (final InterruptedException oops) {
+
 			}
 		}
 		EclipseStream.lastStream = this;

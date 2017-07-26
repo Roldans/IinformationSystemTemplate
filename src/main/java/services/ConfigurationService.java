@@ -58,9 +58,9 @@ public class ConfigurationService {
 		result = this.findConfiguration();
 		res = new Configuration();
 
-		final long hours = configurationForm.getHours() * 3600000;
-		final long minutes = configurationForm.getMinutes() * 60000;
-		final long seconds = configurationForm.getSeconds() * 1000;
+		final long hours = configurationForm.getHours() * 3600000L;
+		final long minutes = configurationForm.getMinutes() * 60000L;
+		final long seconds = configurationForm.getSeconds() * 1000L;
 
 		final long cacheTime = hours + minutes + seconds;
 

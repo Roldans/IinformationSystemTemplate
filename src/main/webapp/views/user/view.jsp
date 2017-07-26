@@ -17,71 +17,53 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags" %>
 
-<acme:image url="${animaniac.picture}"/><br/>
+<acme:image url="${user.picture}"/><br/>
 
 <fieldset>
 
 <b><spring:message code="actor.username"/>:</b>
-<acme:mask text="${animaniac.userAccount.username}"/><br/>
-
-<b><spring:message code="animaniac.rate"/>:</b>
-<acme:mask text="${animaniac.rate}"/><br/>
+<acme:mask text="${user.userAccount.username}"/><br/>
 
 <b><spring:message code="actor.name"/>:</b>
-<acme:mask text="${animaniac.name}"/><br/>
+<acme:mask text="${user.name}"/><br/>
 
 <b><spring:message code="actor.surname"/>:</b>
-<acme:mask text="${animaniac.surname}"/><br/>
+<acme:mask text="${user.surname}"/><br/>
 
 <b><spring:message code="actor.email"/>:</b>
-<jstl:out value="${animaniac.email}"/><br/>
+<jstl:out value="${user.email}"/><br/>
 
 <b><spring:message code="actor.phone"/>:</b>
-<jstl:out value="${animaniac.phone}"/><br/>
+<jstl:out value="${user.phone}"/><br/>
 
-<b><spring:message code="animaniac.genre"/>:</b>
-<jstl:if test="${animaniac.genre eq 'male'}">
-	<spring:message code="animaniac.male" />
+<b><spring:message code="user.genre"/>:</b>
+<jstl:if test="${user.genre eq 'male'}">
+	<spring:message code="user.male" />
 </jstl:if>
-<jstl:if test="${animaniac.genre eq 'female'}">
-	<spring:message code="animaniac.female" />
+<jstl:if test="${user.genre eq 'female'}">
+	<spring:message code="user.female" />
 </jstl:if><br/>
 
-<b><spring:message code="animaniac.address"/>:</b>
-<acme:mask text="${animaniac.address}"/><br/>
+<b><spring:message code="user.address"/>:</b>
+<acme:mask text="${user.address}"/><br/>
 
 </fieldset>
-	<a href="message/write.do?actorId=${animaniac.id}">
+	<a href="message/write.do?actorId=${user.id}">
     	<spring:message  code="actor.sendMessage" />
 	</a>
-<jstl:if test="${curriculum!=null}">
-	<fieldset>
-		<h2><spring:message  code="animaniac.curriculum" />:</h2>
-	
-		<b><spring:message code="curriculum.educationSection"/>:</b><br/>
-		<jstl:out value="${curriculum.educationSection}"/><br/>
-		
-		<b><spring:message code="curriculum.experienceSection"/>:</b><br/>
-		<jstl:out value="${curriculum.experienceSection}"/><br/>
-		
-		<b><spring:message code="curriculum.hobbiesSection"/>:</b><br/>
-		<jstl:out value="${curriculum.hobbiesSection}"/><br/>
-		
-	</fieldset>
-	
-</jstl:if>
+
 
 <fieldset>
 
-	<h2><spring:message  code="animaniac.comments" />:</h2>
+	<h2><spring:message  code="user.comments" />:</h2>
 	<display:table pagesize="5" class="displaytag1" name="comments"
 		requestURI="${requestURI}" id="row">
 
 		<!-- Action links -->
 		<spring:message code="actor.username" var="actorName" />
 	    <display:column title="${actorName}">
-	      <a href="animaniac/view.do?animaniacId=${row.animaniac.id}">
-	   	  <acme:mask text="${row.animaniac.userAccount.username}"/>
+	      <a href="user/view.do?userId=${row.user.id}">
+	   	  <acme:mask text="${row.user.userAccount.username}"/>
 	   	  </a>
 	    </display:column>
 		<!-- Attributes -->
@@ -92,38 +74,27 @@
 		<acme:column sorteable="true" code="comment.body" path="body" />
 
 	</display:table>
-	<a href="comment/animaniac/create.do?commentableId=${animaniac.id}">
+	<a href="comment/user/create.do?commentableId=${user.id}">
     	<spring:message  code="actor.comment" />
 	</a>
 </fieldset>
 
 <jstl:if test="${owner}">
-	<a href="animaniac/animaniac/edit.do?animaniacId=${animaniac.id}">
+	<a href="user/user/edit.do?userId=${user.id}">
     	<spring:message  code="actor.edit" />
 	</a>
 	
-	|
 	
-	<a href="curriculum/animaniac/edit.do">
-		<jstl:if test="${curriculum==null}">
-    		<spring:message  code="animaniac.create.curr" />
-		</jstl:if>
-		<jstl:if test="${curriculum!=null}">
-    		<spring:message  code="animaniac.edit.curr" />
-		</jstl:if>
-	</a>
-	|
+	
+	
 </jstl:if>
 
-<a href="pet/animaniac/list.do?animaniacId=${animaniac.id}">
-    	<spring:message  code="pet.list" />
-	</a>
 
-<security:authorize access="hasRole('ANIMANIAC')">
+<security:authorize access="hasRole('USER')">
 	<jstl:if test="${!owner}">
-	|
-	<a href="abuseReport/animaniac/edit.do?reportedId=${animaniac.id}">
-    	<spring:message  code="animaniac.report" />
+	
+	<a href="abuseReport/user/edit.do?reportedId=${user.id}">
+    	<spring:message  code="user.report" />
 	</a>
 </jstl:if>
 </security:authorize>

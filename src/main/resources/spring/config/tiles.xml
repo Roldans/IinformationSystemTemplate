@@ -33,6 +33,7 @@
 		<value>/views/comment/tiles.xml</value>	
 		<value>/views/abuseReport/tiles.xml</value>	
 		<value>/views/configuration/tiles.xml</value>	
+		<value>/views/spamWord/tiles.xml</value>	
 	</util:list>
 
 </beans>

@@ -88,7 +88,10 @@
 		<security:intercept-url pattern="/abuseReport/administrator/list.do" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/configuration/administrator/view.do" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/configuration/administrator/edit.do" access="hasRole('ADMINISTRATOR')" />
-		
+		<security:intercept-url pattern="/spamword/administrator/list.do" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/spamword/administrator/edit.do" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/spamword/administrator/delete.do" access="hasRole('ADMINISTRATOR')" />
+	
 		<!-- User -->
 <!-- 		<security:intercept-url pattern="" access="hasRole('USER')" /> -->
 		<security:intercept-url pattern="/user/user/edit.do" access="hasRole('USER')" />

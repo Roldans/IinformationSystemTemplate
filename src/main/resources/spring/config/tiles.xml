@@ -34,6 +34,8 @@
 		<value>/views/abuseReport/tiles.xml</value>	
 		<value>/views/configuration/tiles.xml</value>	
 		<value>/views/spamWord/tiles.xml</value>	
+		<value>/views/searchEngine/tiles.xml</value>	
+		
 	</util:list>
 
 </beans>

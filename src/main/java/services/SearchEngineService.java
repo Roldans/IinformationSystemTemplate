@@ -98,7 +98,7 @@ public class SearchEngineService {
 		boolean result;
 		old = this.searchEngineRepository.findOne(searchEngine.getId());
 
-		result = searchEngine.getName() != old.getName();
+		result = !searchEngine.getName().equals(old.getName());
 
 		return result;
 

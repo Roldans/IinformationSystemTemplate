@@ -96,6 +96,7 @@
 <!-- 		<security:intercept-url pattern="" access="hasRole('USER')" /> -->
 		<security:intercept-url pattern="/user/user/edit.do" access="hasRole('USER')" />
 		<security:intercept-url pattern="/abuseReport/user/edit.do" access="hasRole('USER')" />
+		<security:intercept-url pattern="/searchEngine/user/search.do" access="hasRole('USER')" />
 		<!--NONE -->
 		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
 		

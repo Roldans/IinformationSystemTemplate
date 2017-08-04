@@ -29,6 +29,7 @@
 		<value>/views/abuseReport/messages</value>
 		<value>/views/configuration/messages</value>
 		<value>/views/spamWord/messages</value>
+		<value>/views/searchEngine/messages</value>
 		
 	</util:list>
 

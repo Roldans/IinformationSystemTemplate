@@ -261,6 +261,7 @@
 	
 	<bean id="searchEngineUser1" class="domain.SearchEngine">
 		<property name="user" ref="user1" />
+		<property name="searchMoment" value="10/10/2000 12:00"/>
 		<property name="results">
 			<list>
 				<ref bean="user1" />
@@ -270,7 +271,8 @@
 	</bean>	
 	
 	<bean id="searchEngineUser2" class="domain.SearchEngine">
-<property name="user" ref="user2" />
+		<property name="user" ref="user2" />
+		<property name="searchMoment" value="10/10/2000 12:00"/>
 		<property name="results">
 			<list>
 				<ref bean="user1" />

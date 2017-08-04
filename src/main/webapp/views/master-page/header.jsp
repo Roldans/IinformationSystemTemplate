@@ -52,7 +52,11 @@
 					<li class="arrow"></li>
 					<li><a href="actor/myProfile.do"><spring:message code="master.page.profile" /></a></li>
 					<li><a href="folder/list.do"><spring:message code="master.page.messageFolder" /></a></li>
+					<li><a href="folder/list.do"><spring:message code="master.page.messageFolder" /></a></li>
+
 					<security:authorize access="hasRole('USER')">
+					<li><a href="searchEngine/user/search.do"><spring:message code="master.page.search" /></a></li>
+					
 					</security:authorize>
 					<security:authorize access="hasRole('ADMINISTRATOR')">
 					<li><a href="abuseReport/administrator/list.do"><spring:message code="master.page.reportsList" /></a></li>

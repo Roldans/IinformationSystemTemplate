@@ -86,6 +86,9 @@
 <!-- 		<security:intercept-url pattern="" access="hasRole('ADMINISTRATOR')" /> -->
 		<security:intercept-url pattern="/administrator/administrator/edit.do" access="hasRole('ADMINISTRATOR')" />
 		<security:intercept-url pattern="/abuseReport/administrator/list.do" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/configuration/administrator/view.do" access="hasRole('ADMINISTRATOR')" />
+		<security:intercept-url pattern="/configuration/administrator/edit.do" access="hasRole('ADMINISTRATOR')" />
+		
 		<!-- User -->
 <!-- 		<security:intercept-url pattern="" access="hasRole('USER')" /> -->
 		<security:intercept-url pattern="/user/user/edit.do" access="hasRole('USER')" />

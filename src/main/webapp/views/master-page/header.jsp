@@ -51,11 +51,11 @@
 				
 					<li class="arrow"></li>
 					<li><a href="actor/myProfile.do"><spring:message code="master.page.profile" /></a></li>
-					
+					<li><a href="folder/list.do"><spring:message code="master.page.MessageFolder" /></a></li>
 					<security:authorize access="hasRole('USER')">
 					</security:authorize>
 					<security:authorize access="hasRole('ADMINISTRATOR')">
-						
+					<li><a href="abuseReport/administrator/list.do"><spring:message code="master.page.ReportsList" /></a></li>
 					</security:authorize>
 					<li><a href="j_spring_security_logout"><spring:message code="master.page.logout" /></a></li>
 				</ul>

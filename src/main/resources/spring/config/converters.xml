@@ -35,6 +35,13 @@
 		<bean class="converters.FolderToStringConverter" />
 		<bean class="converters.StringToFolderConverter" />
 		
+		<!--Commentable-->
+		<bean class="converters.CommentableToStringConverter" />
+		<bean class="converters.StringToCommentableConverter" />
+		
+		<!--User-->
+		<bean class="converters.UserToStringConverter" />
+		<bean class="converters.StringToUserConverter" />
 	</util:list>
 	
 </beans>

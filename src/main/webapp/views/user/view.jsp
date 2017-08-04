@@ -62,8 +62,8 @@
 		<!-- Action links -->
 		<spring:message code="actor.username" var="actorName" />
 	    <display:column title="${actorName}">
-	      <a href="user/view.do?userId=${row.user.id}">
-	   	  <acme:mask text="${row.user.userAccount.username}"/>
+	      <a href="user/view.do?userId=${row.actor.id}">
+	   	  <acme:mask text="${row.actor.userAccount.username}"/>
 	   	  </a>
 	    </display:column>
 		<!-- Attributes -->
@@ -74,7 +74,7 @@
 		<acme:column sorteable="true" code="comment.body" path="body" />
 
 	</display:table>
-	<a href="comment/user/create.do?commentableId=${user.id}">
+	<a href="comment/actor/create.do?commentableId=${user.id}">
     	<spring:message  code="actor.comment" />
 	</a>
 </fieldset>

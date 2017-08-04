@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="abuseReport/user/edit" extends="master.page">
+		<put-attribute name="title" value="Report" />
+		<put-attribute name="body" value="/views/abuseReport/edit.jsp" />
+	</definition>
+	
+	<definition name="abuseReport/administrator/list" extends="master.page">
+		<put-attribute name="title" value="Report List" />
+		<put-attribute name="body" value="/views/abuseReport/list.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>
